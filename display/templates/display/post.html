@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Criar um post</title>
+    <link href="{% static 'css/post.css' %}" rel="stylesheet">
+
+</head>
+<body>
+    <h1>Crie um post</h1>
+    <a href="/socialMedia">Voltar</a>
+    <form action="{% url 'createPost' %}" method="POST">{% csrf_token %}
+        <br>
+        <input type="text" placeholder="Titulo" name="title">
+        <br>
+        <br>
+        <textarea placeholder="corpo" name="body"></textarea>
+        <br>
+        <br>
+        <input id="createpost" type="submit" value="Criar post">
+    </form>
+</body>
+</html>
+<!--title,slug,author,body-->
+

@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Social Media</title>
+    <link href="{% static 'css/socialMedia.css' %}" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Social Media</h1>
+        <a id="logout" href="/logout">Logout</a>
+    </header>
+    <br>
+    <a id="createpost" href="/post">Criar post</a>
+    <h2>Posts:</h2>
+    <main>
+        {% for post in objetos %}
+        <div>
+        <a href="/posts/{{ post.slug }}"><h1>{{ post.title }}</h1></a>
+        <p>Postado por: {{ post.author }}</p>
+        <h3>{{ post.body }}</h3>
+        </div>
+        {% endfor %}
+    </main>
+    
+</body>
+</html>

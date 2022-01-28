@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cadastro</title>
+    <link href="{% static 'css/cadastro.css' %}" rel="stylesheet">
+
+</head>
+<body>
+    <h1>Cadastre-se</h1>
+    <form action="{% url 'createUser' %}" method="POST">{% csrf_token %}
+        <input type="text" placeholder="username" name="username">
+        <br>
+        <br>
+        <input type="password" placeholder="password" name="password">
+        <br>
+        <br>
+        <input id="createuser" type="submit" value="cadastrar">
+        <br>
+        <br>
+    </form>
+    <a href="/">Voltar</a>
+</body>
+</html>

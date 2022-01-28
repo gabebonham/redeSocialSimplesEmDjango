@@ -1,0 +1,39 @@
+body {
+    background-color: rgb(162, 128, 179);
+    text-align: center;
+    padding:0;
+    margin:0;
+}
+
+#createpost {
+    border-radius: 20px;
+    background-color: rgb(113, 113, 248);
+    color:rgb(255, 255, 255);
+    padding: 10px;
+}
+div {
+    border-style: solid;
+    width: 50%;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    
+
+}
+main {
+    margin-left: 270px;
+    float: left;
+    width: 60%;
+}
+#logout {
+    color: white;
+}
+header {
+    margin: auto auto auto auto;
+    background-color: rgb(148, 46, 148);
+    padding: 10px
+}
+header a {
+    position:relative;
+    left: 500px;
+}

@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ post.title }}</title>
+    <link href="{% static 'css/selectedpost.css' %}" rel="stylesheet">
+</head>
+<body>
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.author }}</p>
+    <h3>{{ post.body }}</h3>
+    <p>{{ likes.likes }}</p>
+    <p>{{ llikes }} likes</p>
+
+    {% if isLiked %}
+    <p>Voce não pode curtir mais</p>
+    {% else %}
+    <form action="{{ post.slug }}/addLike">
+        <button>Like</button>
+    </form>
+    {% endif %}
+    <a href="/socialMedia">Voltar</a>
+    <br>
+    <br>
+    <h4>Comentarios:</h4>
+    {% for item in comment %}
+    <h4>{{ item.author.username }} comentou:</h4>
+    <p>{{ item.comment }}</p>
+    {% endfor %}
+    <form action="/createComment" method="POST">{% csrf_token %}
+        <textarea placeholder="comentario" name="comment"></textarea>
+        <br>
+        <br>
+        <!--<input name="post" type="hidden" value="{{ post.slug }}">-->
+        <input name="post" type="hidden" value="{{ post.slug }}">
+        <input type="submit" value="Comentar">
+    </form>
+</body>
+</html>
+
+
