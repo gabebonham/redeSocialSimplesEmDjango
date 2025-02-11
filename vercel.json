@@ -8,9 +8,17 @@
         "maxLambdaSize": "15mb",
         "runtime": "Python3.9"
       }
+    },
+    {
+      "src": "staticfiles/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/staticfiles/$1"
+    },
     {
       "src": "/(.*)",
       "dest": "socialMedia/wsgi.py"
