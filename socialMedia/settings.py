@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-_obnm_*)cq78@9j1d5po(it@r!bxwuod=2#)#yj)lvlgn1ovx)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['rede-social-simples-em-django-halszmioa-gabebonhams-projects.vercel.app']
+ALLOWED_HOSTS = ['https://rede-social-simples-em-django.vercel.app']
 
 
 # Application definition
