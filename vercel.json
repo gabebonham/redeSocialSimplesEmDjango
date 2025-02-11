@@ -24,7 +24,8 @@
     },
     {
       "src": "/(.*)",
-      "dest": "socialMedia/wsgi.py"
+      "dest": "socialMedia/wsgi.py",
+"continue": true
     }
   ]
 }
