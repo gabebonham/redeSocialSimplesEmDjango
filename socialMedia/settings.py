@@ -77,10 +77,14 @@ WSGI_APPLICATION = 'socialMedia.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'neondb',
+'USER':'neondb_owner',
+'PASSWORD':'foxK2qWyi6SE',
+ 'HOST': 'ep-misty-shadow-a4ugmup4-pooler.us-east-1.aws.neon.tech'
     }
 }
+
 
 
 # Password validation
