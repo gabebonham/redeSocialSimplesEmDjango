@@ -1,0 +1,20 @@
+body {
+    background-color: rgb(162, 128, 179);
+    text-align: center;
+}
+
+a {
+    border-radius: 20px;
+    background-color: rgb(113, 113, 248);
+    color:rgb(255, 255, 255);
+    padding: 10px;
+}
+#btn {
+    background-color: rgb(103, 103, 255);
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: None;
+}
